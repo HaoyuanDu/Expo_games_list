@@ -4,8 +4,12 @@
 // };
 
 // export default GAME;
-export enum gameTypes {
-  FETCH_POST_REQUEST = "FETCH_POST_REQUEST",
-  FETCH_POST_SUCCESS = "FETCH_POST_SUCCESS",
-  FETCH_POST_FAILURE = "FETCH_POST_FAILURE",
+export enum GameActions {
+  FETCH_GAME_REQUEST = "FETCH_GAME_REQUEST",
+  FETCH_GAME_SUCCESS = "FETCH_GAME_SUCCESS",
+  FETCH_GAME_FAILURE = "FETCH_GAME_FAILURE",
 }
+
+export const Actions = {
+  Game: GameActions,
+};

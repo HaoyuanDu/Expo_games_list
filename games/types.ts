@@ -1,5 +1,5 @@
 import { GameType } from "./models/gametype";
-import { gameTypes } from "./store/actionTypes";
+import { Actions } from "./store/actionTypes";
 
 export interface GamesState {
   pending: boolean;
@@ -16,16 +16,16 @@ export interface FetchGamesFailurePayload {
 }
 
 export interface FetchGamesRequest {
-  type: typeof gameTypes.FETCH_GAME_REQUEST;
+  type: typeof Actions.Game.FETCH_GAME_REQUEST;
 }
 
 export type FetchGamesSuccess = {
-  type: typeof gameTypes.FETCH_GAME_SUCCESS;
+  type: typeof Actions.Game.FETCH_GAME_SUCCESS;
   payload: FetchGamesSuccessPayload;
 };
 
 export type FetchGamesFailure = {
-  type: typeof gameTypes.FETCH_GAME_FAILURE;
+  type: typeof Actions.Game.FETCH_GAME_FAILURE;
   payload: FetchGamesFailurePayload;
 };
 

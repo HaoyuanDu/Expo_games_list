@@ -1,4 +1,4 @@
-import { gameTypes } from "./actionTypes";
+import { Actions } from "./actionTypes";
 import {
   FetchGamesFailure,
   FetchGamesFailurePayload,
@@ -8,19 +8,19 @@ import {
 } from "../types";
 
 export const fetchGamesRequest = (): FetchGamesRequest => ({
-  type: gameTypes.FETCH_GAME_REQUEST,
+  type: Actions.Game.FETCH_GAME_REQUEST,
 });
 
 export const fetchGamesSuccess = (
   payload: FetchGamesSuccessPayload
 ): FetchGamesSuccess => ({
-  type: gameTypes.FETCH_GAME_SUCCESS,
+  type: Actions.Game.FETCH_GAME_SUCCESS,
   payload,
 });
 
 export const fetchGamesFailure = (
   payload: FetchGamesFailurePayload
 ): FetchGamesFailure => ({
-  type: gameTypes.FETCH_GAME_FAILURE,
+  type: Actions.Game.FETCH_GAME_FAILURE,
   payload,
 });
