@@ -17,6 +17,9 @@ const GamesScreen: React.FC<any> = (): JSX.Element => {
     dispatch(fetchGamesRequest());
   }, [dispatch]);
 
+  useEffect(() => {
+    dispatch(fetchGamesRequest());
+  }, []);
   const games = useSelector(getGamesState);
   console.log("games", games);
 
@@ -58,21 +61,6 @@ const styles = StyleSheet.create({
   textContainer: {
     alignItems: "center",
     justifyContent: "center",
-  },
-  loadingContainer: {
-    flex: 1,
-    justifyContent: "center",
-  },
-
-  noText: {
-    fontSize: "30s",
-    textAlign: "center",
-    textAlignVertical: "center",
-    height: "80%",
-  },
-  threeDotsContainer: {
-    alignItems: "center",
-    zIndex: 5,
   },
 });
 
